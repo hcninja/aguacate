@@ -36,6 +36,12 @@ var (
 func main() {
 	flag.Parse()
 
+	if *versionFlag {
+		log.Printf("Aguacate 🥑 v%s", version)
+		log.Println("By Jose Gonzalez-Krause <contact@hackercat.ninja>")
+		return
+	}
+
 	log.Printf("Preparing some nice guacamole 🥑 v%s", version)
 
 	if *nmapFileFlag == "" {
